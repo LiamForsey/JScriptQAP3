@@ -1,0 +1,16 @@
+<div class="main-content">
+    <h1>Welcome, <%= user.username %>!</h1>
+    
+    <% if (user.role === 'admin') { %>
+        <h2>All Registered Users:</h2>
+        <ul>
+            <% allUsers.forEach(u => { %>
+                <li><%= u.username %> - <%= u.email %> - <%= u.role %></li>
+            <% }) %>
+        </ul>
+    <% } %>
+    
+    <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</div>

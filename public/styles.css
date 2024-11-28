@@ -1,88 +1,156 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-    background: linear-gradient(90deg, rgba(93,142,251,1) 0%, rgba(93,142,251,1) 50%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(93, 142, 251, 1) 0%, rgba(93, 142, 251, 1) 50%, rgba(0, 212, 255, 1) 100%);
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
+    justify-content: center;
+    align-items: center;
     color: #F6F6F6;
 }
 
+/* Main Content Box */
 .main-content {
     display: flex;
     justify-content: center;
     flex: 1;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
 }
 
+/* Heading */
+.main-content h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Error Message */
 .main-content .error-message {
-    color: yellow;
+    color: #FF6347;
     font-weight: bold;
     font-size: 16px;
-    margin-top: 0px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.main-content h1 {
-    font-size: 50px;
-}
-
-.main-content ul {
-    margin: 0px;
-}
-
-.main-content ul :not(:first-child) {
-    padding-top: 10px;
-}
-
-.main-content li {
-    font-size: 20px;
-}
-
-.main-content a:link {
-    color: #F6F6F6;
-}
-  
-.main-content a:visited {
-    text-decoration: none;
-}
-
+/* Form */
 .main-content form {
     font-size: 18px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    width: 100%;
 }
 
+/* Input fields and labels */
 .main-content form .form-input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .main-content form label {
-    padding-right: 5px;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .main-content form input {
-    border-radius: 5px;
-    border: 0px;
-    font-size: 14px;
-    padding: 5px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    background-color: #F6F6F6;
+    color: #333;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
+.main-content form input:focus {
+    border-color: #4a90e2;
+}
+
+/* Button Styles */
 .main-content button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #4a90e2;
+    color: #fff;
     border: none;
-    background: #F6F6F6;
-    mix-blend-mode: screen;
-    padding: 6px;
-    border-radius: 5px;
-    margin-left: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-.main-content .index-button-container button {
-    font-size: 25px;
-    padding: 10px;
+.main-content button:hover {
+    background-color: #357ab7;
+}
+
+.main-content button:active {
+    background-color: #28557a;
+}
+
+/* Link Styles */
+.main-content a:link,
+.main-content a:visited {
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.main-content a:hover {
+    color: #4a90e2;
+}
+
+/* Index Page Buttons */
+.index-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.index-button-container button {
+    font-size: 20px;
+    padding: 15px 25px;
+    background-color: #f76c5e;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.index-button-container button:hover {
+    background-color: #c85a4b;
+}
+
+.index-button-container button:active {
+    background-color: #9e4539;
 }
