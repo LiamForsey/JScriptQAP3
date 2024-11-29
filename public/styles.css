@@ -7,44 +7,45 @@
 
 /* Body */
 body {
-    background: linear-gradient(90deg, rgba(93, 142, 251, 1) 0%, rgba(93, 142, 251, 1) 50%, rgba(0, 212, 255, 1) 100%);
-    height: 100%;
+    background: linear-gradient(135deg, rgb(154, 153, 153) 0%, rgb(160, 159, 159) 100%); 
+    height: 100vh; /* Ensures it takes up full height */
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #F6F6F6;
+    color: #2e2e2e; /* Dark text color for contrast */
 }
 
-/* Main Content Box */
+/* Main Content Box (Login/Signup Form) */
 .main-content {
     display: flex;
     justify-content: center;
     flex: 1;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for the form */
+    border-radius: 12px; /* Rounded corners */
+    padding: 30px; /* More padding around the form */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow for a floating effect */
     width: 90%;
-    max-width: 500px;
+    max-width: 550px;
+    z-index: 10;
 }
 
 /* Heading */
 .main-content h1 {
     font-size: 48px;
     margin-bottom: 30px;
-    color: #FFF;
+    color: #6d33ff; /* A vibrant purple color */
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Stronger text shadow */
 }
 
 /* Error Message */
 .main-content .error-message {
-    color: #FF6347;
+    color: #D32F2F; /* A deep red for error messages */
     font-weight: bold;
     font-size: 16px;
     margin-top: 0;
@@ -72,15 +73,16 @@ body {
     margin-bottom: 5px;
     font-size: 16px;
     font-weight: bold;
+    color: #333; /* Darker label color for clarity */
 }
 
 .main-content form input {
     width: 100%;
     padding: 12px;
     border-radius: 8px;
-    border: 2px solid #ccc;
+    border: 2px solid #aaa; /* Soft border for inputs */
     font-size: 16px;
-    background-color: #F6F6F6;
+    background-color: #f2f2f2; /* Light grey background for input */
     color: #333;
     margin-top: 5px;
     outline: none;
@@ -88,14 +90,14 @@ body {
 }
 
 .main-content form input:focus {
-    border-color: #4a90e2;
+    border-color: #FF5733; /* Focus color matches the heading for consistency */
 }
 
 /* Button Styles */
 .main-content button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     font-size: 18px;
-    background-color: #4a90e2;
+    background-color: #FF5733; /* Button color to match the heading */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -105,17 +107,17 @@ body {
 }
 
 .main-content button:hover {
-    background-color: #357ab7;
+    background-color: #C04E27; /* Darker shade on hover */
 }
 
 .main-content button:active {
-    background-color: #28557a;
+    background-color: #9E3C1E; /* Even darker shade on active */
 }
 
 /* Link Styles */
 .main-content a:link,
 .main-content a:visited {
-    color: #FFF;
+    color: #FF5733; /* Links now use the button color */
     font-size: 18px;
     margin-top: 15px;
     text-decoration: none;
@@ -123,7 +125,7 @@ body {
 }
 
 .main-content a:hover {
-    color: #4a90e2;
+    color: #C04E27; /* Darker link color on hover */
 }
 
 /* Index Page Buttons */
@@ -137,7 +139,7 @@ body {
 .index-button-container button {
     font-size: 20px;
     padding: 15px 25px;
-    background-color: #f76c5e;
+    background-color: #5528a7; /* Purple buttons for index page */
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -148,9 +150,25 @@ body {
 }
 
 .index-button-container button:hover {
-    background-color: #c85a4b;
+    background-color: #000501; /* Turns Black on hover */
 }
 
-.index-button-container button:active {
-    background-color: #9e4539;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 36px;
+    }
+
+    .main-content form {
+        font-size: 16px;
+    }
+
+    .main-content button {
+        padding: 12px 20px;
+    }
 }

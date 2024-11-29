@@ -153,7 +153,6 @@ app.post("/logout", (request, response) => {
 
 
 
-
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
